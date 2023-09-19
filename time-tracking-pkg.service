@@ -1,0 +1,11 @@
+Description=Put Description
+After=syslog.target network.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/time-tracking-pkg --start
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
